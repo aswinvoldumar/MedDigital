@@ -15,6 +15,50 @@ html {
   scroll-behavior: auto;
 }
 
+.load-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  background: #f2f2f2;
+  transition:
+    opacity 600ms ease-out,
+    visibility 600ms ease-out;
+}
+
+.load-screen-hide {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.load-mark {
+  position: relative;
+  display: grid;
+  width: 168px;
+  height: 168px;
+  place-items: center;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.load-spin {
+  position: absolute;
+  inset: -7px;
+  border-radius: inherit;
+  border: 1.5px solid rgba(13, 148, 136, 0.18);
+  border-top-color: #0d9488;
+  animation: load-spin 900ms linear infinite;
+}
+
+@keyframes load-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #intro,
 #expertise,
 #technology,
@@ -281,7 +325,8 @@ body {
   .float-slow,
   .fade-up,
   .bubble-enter,
-  .journey-label {
+  .journey-label,
+  .load-spin {
     animation: none;
     opacity: 1;
   }

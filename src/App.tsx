@@ -7,10 +7,17 @@ import ServicesSection from "./components/ServicesSection"
 import TechnologyProcess from "./components/TechnologyProcess"
 import CTASection from "./components/CTASection"
 import Footer from "./components/Footer"
+import LoadScreen from "./components/LoadScreen"
 
 export default function App() {
   const [searchOpen, setSearchOpen] = useState(false)
   const [query, setQuery] = useState("")
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setLoading(false), 8000)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     let frame = 0
@@ -54,8 +61,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#F2F2F2] text-[#111]">
+      <LoadScreen visible={loading} />
       <main className="mx-auto flex max-w-[1480px] flex-col gap-4 px-3 py-3 md:gap-5 md:px-4 md:py-4">
-        <HeroSection onOpenSearch={() => setSearchOpen(true)} />
+        <HeroSection onOpenSearch={() => setSearchOpen(true)} onVideoReady={() => setLoading(false)} />
         <MissionSection />
         <ServicesSection />
         <TechnologyProcess />

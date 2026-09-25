@@ -55,9 +55,10 @@ function TypedWord() {
 
 type HeroSectionProps = {
   onOpenSearch: () => void
+  onVideoReady: () => void
 }
 
-export default function HeroSection({ onOpenSearch }: HeroSectionProps) {
+export default function HeroSection({ onOpenSearch, onVideoReady }: HeroSectionProps) {
   return (
     <section id="intro" className="section-shell relative overflow-hidden">
       <div className="relative min-h-[640px] md:min-h-[760px]">
@@ -67,6 +68,9 @@ export default function HeroSection({ onOpenSearch }: HeroSectionProps) {
           muted
           loop
           playsInline
+          preload="auto"
+          onCanPlayThrough={onVideoReady}
+          onError={onVideoReady}
           aria-label="Animated abstract DNA structure"
         >
           <source src="/videos/hero-dna.mp4" type="video/mp4" />
