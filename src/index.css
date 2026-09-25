@@ -99,8 +99,13 @@ body {
   opacity: 0;
 }
 
+.ring-grow {
+  transform-origin: center;
+  animation: ring-grow 4.8s ease-in-out infinite alternate;
+}
+
 .journey-in {
-  animation-duration: 750ms;
+  animation-duration: 1600ms;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   animation-fill-mode: both;
 }
@@ -240,6 +245,17 @@ body {
   }
 }
 
+@keyframes ring-grow {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.86);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+}
+
 @keyframes journey-from-top {
   from {
     opacity: 0;
@@ -326,6 +342,7 @@ body {
   .fade-up,
   .bubble-enter,
   .journey-label,
+  .ring-grow,
   .load-spin {
     animation: none;
     opacity: 1;
