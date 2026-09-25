@@ -35,7 +35,7 @@ export default function TechnologyProcess() {
   return (
     <section id="technology" className="section-shell relative overflow-hidden px-6 py-14 md:px-12 md:py-16 lg:px-16 lg:py-20">
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-x-0 top-0 h-[118%] w-full object-cover object-top"
         autoPlay
         muted
         loop
@@ -44,11 +44,11 @@ export default function TechnologyProcess() {
       >
         <source src="/videos/healthcare-process.mp4" type="video/mp4" />
       </video>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/40" />
+      <div className="pointer-events-none absolute inset-0 bg-black/50" />
 
       <div className="relative z-10">
-      <p className="text-[12px] font-medium tracking-[0.08em] text-[#A0A0A0] uppercase">Technology</p>
-      <h2 className="mt-4 max-w-[640px] text-[36px] leading-[1.02] font-normal tracking-[-0.045em] text-[#111] md:text-[50px] lg:text-[56px]">
+      <p className="text-[12px] font-medium tracking-[0.08em] text-white/70 uppercase">Technology</p>
+      <h2 className="mt-4 max-w-[640px] text-[36px] leading-[1.02] font-normal tracking-[-0.045em] text-white md:text-[50px] lg:text-[56px]">
         From Legacy Systems to Structured Healthcare Data
       </h2>
 
@@ -56,8 +56,8 @@ export default function TechnologyProcess() {
         <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1000 460" fill="none" aria-hidden>
           <path
             d="M120 140 C 240 220, 300 300, 390 320 S 560 80, 620 150 S 820 300, 900 150"
-            stroke="rgba(0,0,0,0.1)"
-            strokeWidth="1"
+            stroke="rgba(255,255,255,0.85)"
+            strokeWidth="1.5"
           />
         </svg>
         {processSteps.map((step, index) => (
@@ -79,8 +79,8 @@ export default function TechnologyProcess() {
       <ol className="mt-10 divide-y divide-black/[0.08] border-y border-black/[0.08] md:hidden">
         {processSteps.map((step) => (
           <li key={step.index} className="flex items-baseline gap-5 py-5">
-            <span className="text-[13px] text-[#A0A0A0]">{step.index}</span>
-            <span className="text-[28px] tracking-[-0.04em] text-[#111] uppercase">{step.label}</span>
+            <span className="text-[13px] text-white/60">{step.index}</span>
+            <span className="text-[28px] tracking-[-0.04em] text-white uppercase">{step.label}</span>
           </li>
         ))}
       </ol>
