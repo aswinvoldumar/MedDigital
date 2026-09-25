@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-page: #f2f2f2;
+  --color-ink: #111111;
+  --color-body: #4a4a4a;
+  --color-muted: #555555;
+  --color-faint: #a0a0a0;
+  --color-soft: #afafaf;
+  --color-accent: #8b7cf6;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+#intro,
+#expertise,
+#technology,
+#services,
+#contact {
+  scroll-margin-top: 16px;
+}
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+  color: #111111;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #111111;
+  color: #ffffff;
+}
+
+.section-shell {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 26px;
+}
+
+.hairline {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.journey-label {
+  opacity: 0;
+}
+
+.journey-in {
+  animation-duration: 750ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+.journey-in.from-top {
+  animation-name: journey-from-top;
+}
+
+.journey-in.from-right {
+  animation-name: journey-from-right;
+}
+
+.journey-in.from-bottom {
+  animation-name: journey-from-bottom;
+}
+
+.journey-in.from-left {
+  animation-name: journey-from-left;
+}
+
+.journey-in.from-top-left {
+  animation-name: journey-from-top-left;
+}
+
+.journey-in.from-bottom-right {
+  animation-name: journey-from-bottom-right;
+}
+
+.bubble-enter {
+  opacity: 0;
+}
+
+.bubbles-in .bubble-enter {
+  animation-duration: 900ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+.bubbles-in .bubble-from-left {
+  animation-name: bubble-from-left;
+}
+
+.bubbles-in .bubble-from-right {
+  animation-name: bubble-from-right;
+}
+
+.bubbles-in .bubble-from-top {
+  animation-name: bubble-from-top;
+}
+
+.bubbles-in .bubble-from-bottom {
+  animation-name: bubble-from-bottom;
+}
+
+.bubbles-in .bubble-from-corner {
+  animation-name: bubble-from-corner;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+.type-caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.82em;
+  margin-left: 3px;
+  transform: translateY(0.06em);
+  background: #0d9488;
+  animation: caret-blink 900ms steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes bubble-from-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-120px, 40px, 0) scale(0.55);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubble-from-right {
+  from {
+    opacity: 0;
+    transform: translate3d(140px, -30px, 0) scale(0.55);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubble-from-top {
+  from {
+    opacity: 0;
+    transform: translate3d(20px, -130px, 0) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubble-from-bottom {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 140px, 0) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubble-from-corner {
+  from {
+    opacity: 0;
+    transform: translate3d(110px, 120px, 0) scale(0.45);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes journey-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes journey-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(56px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes journey-from-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(48px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes journey-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-56px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes journey-from-top-left {
+  from {
+    opacity: 0;
+    transform: translate(-40px, -40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes journey-from-bottom-right {
+  from {
+    opacity: 0;
+    transform: translate(40px, 40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .float-slow,
+  .fade-up,
+  .bubble-enter,
+  .journey-label {
+    animation: none;
+    opacity: 1;
+  }
+}
