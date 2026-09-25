@@ -14,7 +14,7 @@ export default function CTASection() {
             support.
           </p>
           <a
-            href="mailto:hello@meddata.example"
+            href="mailto:info@bizintellis.com"
             className="mt-8 inline-flex h-11 items-center rounded-full bg-[#111] px-6 text-[12px] font-medium tracking-[0.08em] text-white uppercase transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#0D9488]"
           >
             Get Started
