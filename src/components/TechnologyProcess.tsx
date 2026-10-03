@@ -49,7 +49,7 @@ export default function TechnologyProcess() {
       <div className="relative z-10">
       <p className="text-[12px] font-medium tracking-[0.08em] text-white/70 uppercase">Technology</p>
       <h2 className="mt-4 max-w-[640px] text-[36px] leading-[1.02] font-normal tracking-[-0.045em] text-white md:text-[50px] lg:text-[56px]">
-        From Legacy Systems to Structured Healthcare Data
+        A Structured Approach to Healthcare Data Transition
       </h2>
 
       <div ref={bubblesRef} className={`relative mt-12 hidden h-[460px] md:block ${shown ? "bubbles-in" : ""}`}>

@@ -1,12 +1,13 @@
 export const brand = {
-  wordmark: "MDS -Bizintellis",
+  wordmark: "Bizintellis",
   url: "https://www.bizintellis.com/",
-  eyebrow: "MDS / EHR Support",
+  eyebrow: "Healthcare Data & EHR Solutions",
 }
 
 export const sideNav = [
   { id: "intro", label: "Intro" },
   { id: "expertise", label: "Expertise" },
+  { id: "clinical", label: "Clinical" },
   { id: "technology", label: "Technology" },
   { id: "services", label: "Services" },
   { id: "contact", label: "Contact" },
@@ -27,42 +28,42 @@ export const services = [
     index: "01",
     title: "EHR Data Conversion",
     description:
-      "Convert legacy electronic health record data into structured, accessible formats while maintaining data integrity and clinical context.",
+      "Transform legacy healthcare data into structured formats suited to modern platforms and downstream use.",
   },
   {
     id: "emr-extraction",
     index: "02",
     title: "EMR Data Extraction",
     description:
-      "Extract critical medical record information from legacy systems and prepare it for secure transformation or migration.",
+      "Support secure retrieval of required clinical, operational, and historical data from legacy source systems.",
   },
   {
     id: "archiving",
     index: "03",
     title: "Healthcare Data Archiving",
     description:
-      "Preserve historical healthcare records in secure, accessible, and organized digital archives.",
+      "Organize historical healthcare records for secure, durable, and accessible retention.",
   },
   {
     id: "migration",
     index: "04",
     title: "Legacy System Migration",
     description:
-      "Move healthcare data from outdated platforms into modern environments with minimal disruption.",
+      "Support structured migration from legacy platforms into modern environments with attention to continuity, integrity, and accessibility.",
   },
   {
     id: "validation",
     index: "05",
     title: "Data Validation & Quality",
     description:
-      "Verify data structure, completeness, consistency, and integrity throughout the transformation process.",
+      "Validate completeness, mapping, structure, and usability before data is accepted into the target environment.",
   },
   {
     id: "support",
     index: "06",
     title: "EHR Technical Support",
     description:
-      "Provide ongoing technical support for EHR and EMR environments, integrations, migrations, and data workflows.",
+      "Provide technical support around healthcare data workflows, system transitions, integrations, and operational continuity.",
   },
 ] as const
 

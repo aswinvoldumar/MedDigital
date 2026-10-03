@@ -12,9 +12,9 @@ export default function InformationStrip() {
           </h2>
         </div>
         <p className="max-w-[460px] text-[15px] leading-[1.6] text-[#555] md:pt-6 md:text-[16px]">
-          We help healthcare organizations transform legacy EHR and EMR data into structured,
-          accessible, and usable digital records while maintaining data integrity throughout the
-          process.
+          We combine healthcare domain expertise with technology capabilities to support the
+          transformation of legacy EHR and EMR data into structured, accessible, and usable digital
+          records.
         </p>
       </div>
     </div>

@@ -1,57 +1,8 @@
-import { useEffect, useState } from "react"
 import { ArrowDown } from "lucide-react"
+import { brand } from "../data/content"
 import Navbar from "./Navbar"
 import HeroSideNavigation from "./HeroSideNavigation"
 import InformationStrip from "./InformationStrip"
-
-const typedWords = ["Accessible", "Archived"]
-
-function TypedWord() {
-  const [text, setText] = useState("")
-  const [wordIndex, setWordIndex] = useState(0)
-  const [deleting, setDeleting] = useState(false)
-
-  useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (reduceMotion) {
-      setText(typedWords[0])
-      return
-    }
-
-    const word = typedWords[wordIndex]
-    let delay = deleting ? 46 : 88
-    if (!deleting && text === word) delay = 1400
-    if (deleting && text === "") delay = 240
-
-    const timer = window.setTimeout(() => {
-      if (!deleting) {
-        if (text === word) {
-          setDeleting(true)
-          return
-        }
-        setText(word.slice(0, text.length + 1))
-        return
-      }
-
-      if (text === "") {
-        setDeleting(false)
-        setWordIndex((index) => (index + 1) % typedWords.length)
-        return
-      }
-
-      setText(word.slice(0, text.length - 1))
-    }, delay)
-
-    return () => window.clearTimeout(timer)
-  }, [text, deleting, wordIndex])
-
-  return (
-    <span className="inline-block min-w-[10ch] text-[#0D9488]">
-      {text}
-      <span className="type-caret align-middle" aria-hidden />
-    </span>
-  )
-}
 
 type HeroSectionProps = {
   onOpenSearch: () => void
@@ -85,21 +36,18 @@ export default function HeroSection({ onOpenSearch, onVideoReady }: HeroSectionP
           <div className="relative mt-14 md:mt-20 lg:mt-24">
             <div className="relative z-10 lg:pr-28">
               <p className="text-[12px] font-medium tracking-[0.08em] text-[#111] uppercase">
-                MDS / EHR Support
+                {brand.eyebrow}
               </p>
-              <h1 className="fade-up mt-5 text-[42px] leading-[1.12] font-normal tracking-[-0.05em] text-[#111] sm:text-[52px] md:text-[64px] lg:text-[74px]">
-                <span className="sr-only">Turning Legacy Healthcare Data Into Accessible Digital Records</span>
-                <span aria-hidden>
-                  Turning Legacy Healthcare
-                  <br />
-                  Data Into <TypedWord />
-                  <br />
-                  Digital Records
-                </span>
+              <h1 className="fade-up mt-5 text-[46px] leading-[1.05] font-normal tracking-[-0.05em] text-[#111] sm:text-[56px] md:text-[70px] lg:text-[82px]">
+                Modernizing
+                <br />
+                <span className="text-[#0D9488]">Healthcare</span> Data
+                <br />
+                for What Comes Next
               </h1>
               <p className="mt-7 max-w-[420px] text-[15px] leading-[1.6] text-[#4A4A4A] md:text-[16px]">
-                Secure electronic health record and electronic medical record data conversion,
-                extraction, archiving, and migration support for modern healthcare environments.
+                EHR and healthcare data support for extraction, conversion, validation, migration,
+                and long-term accessibility.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-6">
                 <a

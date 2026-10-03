@@ -26,7 +26,7 @@ export default function ServicesSection() {
 
         <div className="px-3 py-6 md:px-6 md:py-8">
           <p className="max-w-[280px] text-[15px] leading-[1.5] text-[#111]">
-            Driven by careful handling of healthcare data and a precise approach to technical work.
+            Support for extraction, conversion, validation, migration, and archiving.
           </p>
           <a
             href="#technology"

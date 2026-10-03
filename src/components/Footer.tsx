@@ -13,7 +13,7 @@ export default function Footer() {
           >
             {brand.wordmark}
           </a>
-          <p className="mt-1 text-[13px] text-[#555]">MDS / EHR Support</p>
+          <p className="mt-1 text-[13px] text-[#555]">{brand.eyebrow}</p>
         </div>
         <nav className="flex flex-wrap gap-x-5 gap-y-2">
           {sideNav.map((item) => (

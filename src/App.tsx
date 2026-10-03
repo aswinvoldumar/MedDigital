@@ -3,6 +3,7 @@ import { X } from "lucide-react"
 import { services } from "./data/content"
 import HeroSection from "./components/HeroSection"
 import MissionSection from "./components/MissionSection"
+import ClinicalSection from "./components/ClinicalSection"
 import ServicesSection from "./components/ServicesSection"
 import TechnologyProcess from "./components/TechnologyProcess"
 import CTASection from "./components/CTASection"
@@ -65,6 +66,7 @@ export default function App() {
       <main className="mx-auto flex max-w-[1480px] flex-col gap-4 px-3 py-3 md:gap-5 md:px-4 md:py-4">
         <HeroSection onOpenSearch={() => setSearchOpen(true)} onVideoReady={() => setLoading(false)} />
         <MissionSection />
+        <ClinicalSection />
         <ServicesSection />
         <TechnologyProcess />
         <CTASection />

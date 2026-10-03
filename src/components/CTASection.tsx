@@ -10,8 +10,8 @@ export default function CTASection() {
         </div>
         <div>
           <p className="max-w-[360px] text-[15px] leading-[1.6] text-[#555]">
-            Talk with the team about EHR and EMR conversion, extraction, archiving, and migration
-            support.
+            Talk with the Bizintellis team about extraction, conversion, validation, migration, and
+            archiving support.
           </p>
           <a
             href="mailto:info@bizintellis.com"
